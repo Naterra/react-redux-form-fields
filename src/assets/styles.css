@@ -1,0 +1,19 @@
+.input-field .required::after {
+  content: "*";
+}
+.input-field.required label::after {
+  content: "*" !important;
+  position: relative !important;
+  display: inline-block !important;
+  color: red;
+  margin-left: 3px;
+  opacity: 1 !important;
+}
+.input-field .field-error {
+  color: #ff6559;
+}
+.input-field .field-warn {
+  color: #ff812b;
+}
+
+/*# sourceMappingURL=styles.css.map */
