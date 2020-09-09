@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles.css';
 
-const Input = ({ input, type, label = '', preLabel, placeholder = '', required, disabled = false, meta: { touched, error, warning } }) => (
+const Input = ({ input, type='text', label = '', preLabel, placeholder = '', required, disabled = false, meta: { touched, error, warning } }) => (
 	<div className={`input-field ${required ? 'required' : ''}`}>
 		{preLabel && <span style={{}}>{preLabel || ''}</span>}
 

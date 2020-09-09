@@ -28,6 +28,20 @@ Required.args = {
 	required: true,
 };
 
+export const PasswordField = Template.bind({});
+PasswordField.args = {
+	...Primary.args,
+	label: 'Password',
+	type: 'password',
+};
+
+export const EmailField = Template.bind({});
+EmailField.args = {
+	...Primary.args,
+	label: 'E-Mail',
+	type: 'email',
+};
+
 export const ErrorMessage = Template.bind({});
 ErrorMessage.args = {
 	...Primary.args,
