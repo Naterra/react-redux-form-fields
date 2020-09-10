@@ -1,13 +1,17 @@
 import React from 'react';
 import Input from '../src/Input';
+import { Field } from 'redux-form';
+import ReduxForm from '../.storybook/decorators/ReduxForm';
+
 
 export default {
-	title: 'Forms/Input',
+	title: 'Input',
 	component: Input,
-	argTypes: {}
+	argTypes: {},
+	decorators: [story => <ReduxForm story={story} />]
 };
 
-const Template = args => <Input {...args} />;
+const Template = args =><Field name="numbers" component={Input} {...args} />;
 
 
 export const Primary = Template.bind({});
