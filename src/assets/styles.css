@@ -11,9 +11,11 @@
 }
 .input-field .field-error {
   color: #ff6559;
+  font-size: 12px;
 }
 .input-field .field-warn {
   color: #ffab53;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */
