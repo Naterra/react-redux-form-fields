@@ -21,7 +21,7 @@ Primary.args = {
 export const DisplayFile = Template.bind({});
 DisplayFile.args = {
 	...Primary.args,
-	input: {
-		value: 'https://www.nymetroparents.com/columnpic2/manhattan-skyline-sunset.jpg'
+	formValues: {
+		file: 'https://www.nymetroparents.com/columnpic2/manhattan-skyline-sunset.jpg'
 	}
 };

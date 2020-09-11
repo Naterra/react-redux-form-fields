@@ -1,10 +1,9 @@
 import React from 'react';
 
-const ImageField = ({ input, name, label = 'File', fieldName, formValues, deleteImageFile }) => {
+const ImageField = ({ input, name, label = 'File', formValues, deleteFileCallback }) => {
 	const { value, ...inputProps } = input;
-
-	const initialValue = (formValues && formValues[name]) || value;
-
+	const initialValue = (formValues && formValues[name]) || false;
+	
 	const handleChange = e => {
 		const file = e.target.files[0];
 		input.onChange(file);
@@ -15,7 +14,7 @@ const ImageField = ({ input, name, label = 'File', fieldName, formValues, delete
 			<div className="col s12">
 				<label style={{ float: 'left', display: 'block', width: '100%', marginBottom: '10px' }}>{label}</label>
 				<img src={initialValue} style={{ width: '200px' }} />
-				<i className="material-icons red-text" onClick={e => (deleteImageFile ? deleteImageFile(name) : false)}>
+				<i className="material-icons red-text" onClick={e => (deleteFileCallback ? deleteFileCallback(name) : false)}>
 					delete_forever
 				</i>
 			</div>
@@ -28,7 +27,7 @@ const ImageField = ({ input, name, label = 'File', fieldName, formValues, delete
 ImageField.defaultProps = {
 	label: 'File',
 	name: 'file',
-	deleteImageFile: null
+	deleteFileCallback: null
 };
 
 const UploadInterface = ({ label, inputProps, handleChange }) => {
